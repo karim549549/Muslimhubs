@@ -1,0 +1,226 @@
+:root{
+    --blue:rgb(0, 50, 50);
+    --green:rgb(0, 163, 96);
+}
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+.landing{
+    background-image: url(gradient-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+.card{
+border-radius: 7px;
+padding: 10px 10px 30px 10px;
+transition: 0.5s;
+
+}
+@media(min-width:775px){
+    .card{
+        animation: card 0.5s forwards linear;
+    }
+}
+.card:hover{
+    transform: scale(1.2);
+}
+.card1{
+    background-color: rgb(130, 84, 243);
+}
+.card2{
+    background-color:  rgb(0, 163, 96);
+
+}
+.card3{
+    background-color:rgb(0, 50, 50);
+}
+.landing p{
+    font-size: 15px;
+    width: 246px;
+    text-align: center;
+}
+.landing a{
+    padding: 10px;
+    background-color: white;
+    padding: 9px 20px;
+    background-color: white;
+    border-radius: 7px;
+    font-weight: bold;
+}
+.card1 a{
+    background-color: white;
+    color: rgb(130, 84, 243);
+}
+.card2 a{
+    background-color: white;
+    color: rgb(0, 163, 96);
+}
+.card3 a{
+    background-color: white;
+    color: rgb(0, 50, 50);
+}
+/*section1*/
+.section h1{
+    color: var(--green);
+}
+.section1 p{
+    line-height: 2;
+}
+@media (max-width: 652px){
+    .section1{
+        text-align: center;
+        }
+}
+/*section1*/
+/*section2*/
+.section2{
+    text-align: center;
+    background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #D4AF37;
+}
+.section2 img{
+    max-width: 55px;
+    
+}
+.icons{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    transition: 0.7s;
+}
+.icons:hover{
+    background-color: #D4AF37;
+    transform: scale(1.1);
+    margin-bottom: 10px;
+}
+.section2 p{
+    max-width: 200px;
+    text-align: center;
+    font-size: 15px;
+}
+
+@media (max-width: 652px){
+    .cards{
+        display: block!important;
+        }
+}
+/*section2*/
+/*section3*/
+.section3 img{
+    animation: updown 5s linear infinite alternate;
+}
+/*section3*/
+/*section4*/
+.section4{
+    background-image: url(google.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    color: white;
+    min-height: 65vh;
+}
+.location{
+    background-color: rgba(0,0,0,.6);
+    width: 50%;
+    min-height: 65vh;
+}
+
+.location input{
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 2px solid white;
+    width: 90%;
+    padding: 10px 10px 10px 0px;
+    color: white;
+}
+.location input:focus{
+    outline: none;
+}
+.location img{
+    width: 21px;
+    border-bottom: 2px solid white;
+    padding-bottom: 16px;
+}
+.location span{
+    font-size:20px;
+}
+.times{
+    background-color: rgb(0,0,0,0.5);
+    padding: 14px 10px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 200px;
+}
+.times::before{ 
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    height: 1px;
+    width: 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+.times:hover{
+    color: black;
+
+}
+.times:hover::before{
+    width: 100%;
+}
+@media(max-width:450px){
+    .location{
+        width: 100%;
+    }
+}
+/*section4*/
+/*section5*/
+.section5{
+    height: 70vh;
+    background-color: black;
+}
+.section5 img{
+    max-width: 282px;
+}
+.section5 p{
+    max-width: 250px;
+}
+.card5{
+    background-color: #eff3f4;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 0px;
+    width: fit-content;
+}
+/*section5*/
+@keyframes updown {
+    50%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(40px);
+    }
+}
+@keyframes card{
+    0%{
+        opacity: 0;
+        background-color: white 0.5;
+        width: 80%;
+        height: 80%;
+        margin-top:40px;
+    }
+    100%{
+        opacity: 1s;
+        width: 100%;
+        height: 100%;
+        margin: 0px ;
+    }
+}
